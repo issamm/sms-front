@@ -5,18 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+
+registerLocaleData(localeFr, 'fr');
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WelcomeComponent,
-    PageNotFoundComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        WelcomeComponent,
+        PageNotFoundComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule
+    ],
+    providers: [{ provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
