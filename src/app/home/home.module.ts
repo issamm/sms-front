@@ -39,9 +39,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListeSeancesComponent } from './liste-seances/liste-seances.component';
 
 @NgModule({
-    declarations: [MainHomeComponent, PleaseHelpAlertDialog],
+    declarations: [MainHomeComponent, PleaseHelpAlertDialog, ListeSeancesComponent],
 
     entryComponents: [
         PleaseHelpAlertDialog
