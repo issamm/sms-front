@@ -52,32 +52,20 @@
 
                     <ul class="navbar-nav ml-auto stylish-nav" *ngIf="!loading">
 
-                        <li class="nav-item">
-                            <a class="m-t-5 btn" (click)="auth.login()" *ngIf="!auth.loggedIn">
-                                S'authentifier
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="m-t-5 btn btn-rounded btn-outline-success" (click)="auth.login()"
-                                *ngIf="!auth.loggedIn">
-                                Créer un compte
-                            </a>
-                        </li>
                         <li>
                             <ul class="navbar-nav my-lg-0">
-                                <li class="nav-item dropdown"
-                                    *ngIf="auth.loggedIn && auth.userProfile$ | async as profile">
+                                <li class="nav-item dropdown">
                                     <a class="nav-link text-muted
-                                        waves-effect waves-dark" routerLink="/hello" style="padding-bottom: 0px;">
-                                        <img src="{{ profile.picture }}" alt="user" class="profile-pic" width="16"
+                                        waves-effect waves-dark" routerLink="/home" style="padding-bottom: 0px;">
+                                        <img src="/assets/images/users/1.jpg" alt="user" class="profile-pic" width="16"
                                             height="16" style="border-radius: 100%;" />
-                                        <span>{{ profile.name }}</span>
+                                        <span>Charlotte Lebon</span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right animated flipInY"
                                         style="    min-width: 250px;">
                                         <ul class="dropdown-user">
                                             <li>
-                                                <a class="navbarlink-connect" routerLink="/hello" aria-expanded="false">
+                                                <a class="navbarlink-connect" routerLink="/home" aria-expanded="false">
                                                     <i class="ti-user"></i>
                                                     Entrer dans votre espace
                                                 </a>
@@ -139,84 +127,15 @@
                         </p>
                         <div class="down-btn">
                             <!-- <a href="#demos" class="btn btn-rounded btn-info m-b-10">DEMOS</a> -->
-                            <a class="btn btn-rounded btn-success m-b-10" (click)="auth.login()">Entrez</a> </div>
+                            <a class="btn btn-rounded btn-success m-b-10" routerLink="/home">Entrez</a> </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="hero-banner m-t-30"> <img src="/assets/images/welcome/hero.jpg"
-                                class="img-responsive" alt="SMS" /> </div>
+                        <!-- <div class="hero-banner m-t-30"> <img src="/assets/images/welcome/hero.jpg"
+                                class="img-responsive" alt="SMS" /> </div> -->
                     </div>
                 </div>
             </div>
 
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <!-- <footer class="footer row">
-                <div class="fix-width">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6"><img src="images/logo-light-icon.png" alt="logo" /> <img
-                                src="images/logo-light-text.png" alt="logo" />
-                            <p class="m-t-30">
-                                <span class="text-white">Monster Admin</span> is premium quality admin dashboard
-                                template with flat design. It is fully responsive admin dashboard template built with
-                                Bootstrap Framework, HTML5 & CSS3, Media query. </p>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <ul class="footer-link list-icons">
-                                <li><a href="../minimal/index.html"><i class="ti-angle-right"></i> Modern Dashboard</a>
-                                </li>
-                                <li><a href="../minimal/index2.html"><i class="ti-angle-right"></i> Awesome Dashboad</a>
-                                </li>
-                                <li><a href="../minimal/index3.html"><i class="ti-angle-right"></i> Classy Dashboad</a>
-                                </li>
-                                <li><a href="../minimal/index4.html"><i class="ti-angle-right"></i> Analytical
-                                        Dashboard</a></li>
-                                <li><a href="../minimal/index5.html"><i class="ti-angle-right"></i> Minimal
-                                        Dashboard</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <ul class="footer-link list-icons">
-                                <li><a href="../minimal/widget-apps.html"><i class="ti-angle-right"></i> Widget
-                                        Sections</a></li>
-                                <li><a href="../minimal/chart-chartist.html"><i class="ti-angle-right"></i> Chart
-                                        Options</a></li>
-                                <li><a href="../minimal/form-layout.html"><i class="ti-angle-right"></i> Lots of Form
-                                        Layouts</a></li>
-                                <li><a href="../minimal/table-data-table.html"><i class="ti-angle-right"></i> Data Table
-                                        Options</a></li>
-                                <li><a href="../minimal/index.html"><i class="ti-angle-right"></i> Calendar Designs</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <ul class="footer-link list-icons">
-                                <li><a href="../minimal/app-email.html"><i class="ti-angle-right"></i> Inbox Layout</a>
-                                </li>
-                                <li><a href="../minimal/pages-treeview.html"><i class="ti-angle-right"></i> Tree View
-                                        Options</a></li>
-                                <li><a href="../minimal/ui-carousel.html"><i class="ti-angle-right"></i> Carousel Slider
-                                        Option</a></li>
-                                <li><a href="../minimal/pages-gallery.html"><i class="ti-angle-right"></i> Gallery
-                                        Option</a></li>
-                                <li><a href="../minimal/starter-kit.html"><i class="ti-angle-right"></i> Starter
-                                        Pages</a></li>
-                            </ul>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-md-12 sub-footer">
-                            <span>Copyright 2017. All Rights Reserved by <a class="text-white"
-                                    href="https://wrappixel.com/templates/monsteradmin/" target="_blank">Monster
-                                    Admin</a></span>
-                            <span class="pull-right">Design & Developed by <a class="text-white"
-                                    href="https://wrappixel.com" target="_blank">WrapPixel</a></span>
-                        </div>
-                    </div>
-                </div>
-            </footer> -->
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
         <!-- End Container fluid  -->

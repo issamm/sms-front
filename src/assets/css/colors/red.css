@@ -44,6 +44,7 @@ File: scss
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #f62d51 0%, #660fb5 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(217deg, rgba(255, 186, 185, 0.8), rgba(255,185,185,0) 70.71%), linear-gradient(127deg, rgba(225,205,255,.8), rgba(185,255,185,0) 70.71%), linear-gradient(336deg, rgba(185,185,255,.8), rgba(185,185,255,0) 70.71%) !important;
 }
 
 .topbar .top-navbar .navbar-header .navbar-brand .dark-logo {
