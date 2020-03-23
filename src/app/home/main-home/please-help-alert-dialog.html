@@ -6,7 +6,7 @@
         padding: 10px;">
 
     <mat-form-field class="example-full-width">
-        <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choisissez une date">
+        <input matInput [matDatepicker]="picker" placeholder="Choisissez une date">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
