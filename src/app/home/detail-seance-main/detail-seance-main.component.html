@@ -1,0 +1,27 @@
+<div style="position:absolute;z-index:21;width: 80%;">
+    <div class="row page-titles">
+        <div class="col-md-6 col-8 align-self-center">
+            <h3 class="text-themecolor m-b-0 m-t-0">Première connexion</h3>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="..">Home</a></li>
+                <li class="breadcrumb-item active">Première connexion</li>
+            </ol>
+        </div>
+    </div>
+
+    <div>
+        <nav class="m-b-20" mat-tab-nav-bar labelPosition="bottom" #stepper>
+            <a mat-tab-link [routerLink]="'start'" routerLinkActive="active-tab" #rla="routerLinkActive">
+                Dites-nous vos sentiments avant la séance ?
+            </a>
+            <a mat-tab-link [routerLink]="'content'" routerLinkActive="active-tab" #rla="routerLinkActive">
+                Voir la vidéo
+            </a>
+            <a mat-tab-link [routerLink]="'end'" routerLinkActive="active-tab" #rla="routerLinkActive">
+                Comment-vous sentez-vous ?
+            </a>
+        </nav>
+
+        <router-outlet></router-outlet>
+    </div>
+</div>

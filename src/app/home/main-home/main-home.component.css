@@ -1,3 +1,7 @@
 .slogan {
     font-family: 'Montserrat Alternates', sans-serif;
   }
+
+  .active-tab {
+    color: #f62d51;
+}

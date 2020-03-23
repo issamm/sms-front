@@ -40,9 +40,13 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListeSeancesComponent } from './liste-seances/liste-seances.component';
+import { DetailSeanceStartWithQuestionsComponent } from './detail-seance-start-with-questions/detail-seance-start-with-questions.component';
+import { DetailSeanceEndWithQuestionsComponent } from './detail-seance-end-with-questions/detail-seance-end-with-questions.component';
+import { DetailSeanceMiddleWithVideoComponent } from './detail-seance-middle-with-video/detail-seance-middle-with-video.component';
+import { DetailSeanceMainComponent } from './detail-seance-main/detail-seance-main.component';
 
 @NgModule({
-    declarations: [MainHomeComponent, PleaseHelpAlertDialog, ListeSeancesComponent],
+    declarations: [MainHomeComponent, PleaseHelpAlertDialog, ListeSeancesComponent, DetailSeanceStartWithQuestionsComponent, DetailSeanceEndWithQuestionsComponent, DetailSeanceMiddleWithVideoComponent, DetailSeanceMainComponent],
 
     entryComponents: [
         PleaseHelpAlertDialog

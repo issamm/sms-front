@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
-import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { MAT_DATE_LOCALE, GestureConfig } from '@angular/material/core';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -23,7 +23,9 @@ registerLocaleData(localeFr, 'fr');
         AppRoutingModule,
         BrowserAnimationsModule
     ],
-    providers: [{ provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }],
+    providers: [
+        { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig },
+        { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
